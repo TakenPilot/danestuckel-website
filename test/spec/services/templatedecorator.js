@@ -3,7 +3,7 @@
 describe('Service: TemplateDecorator', function () {
 
   // load the service's module
-  beforeEach(module('daneStuckelWebsiteApp'));
+  beforeEach(module('danestuckelWebsiteApp'));
 
   // instantiate service
   var TemplateDecorator;

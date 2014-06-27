@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('daneStuckelWebsiteApp', [
+  .module('danestuckelWebsiteApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -22,6 +22,14 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/history', {
+        templateUrl: 'views/history.html',
+        controller: 'HistoryCtrl'
+      })
+      .when('/projects', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
       })
       .otherwise({
         redirectTo: '/'

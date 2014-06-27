@@ -7,8 +7,8 @@
  * # HeaderCtrl
  * Controller of the danestuckelWebsiteApp
  */
-angular.module('daneStuckelWebsiteApp')
-  .controller('HeaderCtrl', ['$scope', '$location', '$log', function ($scope, $location, $log) {
+angular.module('danestuckelWebsiteApp')
+  .controller('HeaderCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.isActive = function (path) {
       return path === $location.path();
     };

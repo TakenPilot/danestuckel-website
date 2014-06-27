@@ -13,27 +13,30 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
   </head>
-  <body ng-app="daneStuckelWebsiteApp">
+  <body ng-app="danestuckelWebsiteApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
+      <div class="header" ng-controller="HeaderCtrl">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li ng-class="{ active: isActive('/')}"><a ng-href="#">Home</a></li>
+          <li ng-class="{ active: isActive('/history')}"><a ng-href="#/history">History</a></li>
+          <li ng-class="{ active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
         </ul>
-        <h3 class="text-muted">retconWebsite</h3>
+        <h1 class="text-muted">Dane Stuckel</h1>
       </div>
 
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>Copyright not reserved.</p>
       </div>
     </div>
 
@@ -76,6 +79,7 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -87,6 +91,8 @@
         <script src="scripts/controllers/services.js"></script>
         <script src="scripts/controllers/rates.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/controllers/history.js"></script>
+        <script src="scripts/controllers/projects.js"></script>
         <!-- endbuild -->
 </body>
 </html>

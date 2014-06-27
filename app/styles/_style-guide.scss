@@ -1,0 +1,39 @@
+//always a pointer, even if it's a local reference or a ng-click
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14.3px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 80%;
+
+  td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  tr:nth-child(even) {
+    background: lightgray;
+  }
+
+  &.static-two-column {
+    td {
+      width: 50%;
+    }
+  }
+}

@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the retconWebsiteApp
  */
-angular.module('daneStuckelWebsiteApp')
+angular.module('danestuckelWebsiteApp')
   .controller('MainCtrl', ['$scope', 'TemplateDecorator', function ($scope, TemplateDecorator) {
     TemplateDecorator.apply($scope);
   }]);

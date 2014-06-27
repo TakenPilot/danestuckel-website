@@ -4,7 +4,7 @@
 describe('Controller: HeaderCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('daneStuckelWebsiteApp'));
+  beforeEach(module('danestuckelWebsiteApp'));
 
   var HeaderCtrl, $location,
     scope, sandbox;
@@ -24,12 +24,12 @@ describe('Controller: HeaderCtrl', function () {
       HeaderCtrl = $controller('HeaderCtrl', {
         $scope: scope
       });
-    })
+    });
   });
 
   afterEach(function () {
     sandbox.restore();
-  })
+  });
 
   it('should exist', function () {
     expect(!!HeaderCtrl).toBe(true);
@@ -38,7 +38,7 @@ describe('Controller: HeaderCtrl', function () {
   it('should be active if path matches location', function () {
     var testValue = 'testValue';
 
-    sandbox.stub($location, 'path').returns(testValue)
+    sandbox.stub($location, 'path').returns(testValue);
 
     expect(scope.isActive(testValue)).toBe(true);
   });
