@@ -4,14 +4,44 @@ a {
 }
 
 h1 {
+  color: $primaryDarkText;
   font-family: 'Raleway', sans-serif;
 }
 
 h2, h3, h4, h5, h6 {
+  color: $primaryDarkText;
   font-family: 'Lato', sans-serif;
 }
 
+section {
+  clear: both;
+  padding: 20px;
+  background-color: $primarySectionBackground;
+}
+
+.footer {
+  clear: both;
+  color: $primaryDarkText;
+}
+
+.half {
+  width: 50%;
+}
+
+.container {
+  @include border-radius(4px, 4px);
+  background-color: $primaryContainerBackground;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: $highlightBackground;
+  color: $highlightText;
+}
+
 body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-color: $primaryBackground;
   font-family: 'Arimo', sans-serif;
   font-size: 14.3px;
 }

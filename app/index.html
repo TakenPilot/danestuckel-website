@@ -15,23 +15,38 @@
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="danestuckelWebsiteApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="header navbar navbar-default navbar-fixed-top" ng-controller="HeaderCtrl" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Dane Stuckel</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav nav-pills">
+            <li ng-class="{ active: isActive('/')}"><a ng-href="#">Home</a></li>
+            <li ng-class="{ active: isActive('/history')}"><a ng-href="#/history">History</a></li>
+            <li ng-class="{ active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header" ng-controller="HeaderCtrl">
-        <ul class="nav nav-pills pull-right">
-          <li ng-class="{ active: isActive('/')}"><a ng-href="#">Home</a></li>
-          <li ng-class="{ active: isActive('/history')}"><a ng-href="#/history">History</a></li>
-          <li ng-class="{ active: isActive('/projects')}"><a ng-href="#/projects">Projects</a></li>
-        </ul>
-        <h1 class="text-muted">Dane Stuckel</h1>
-      </div>
+
 
       <div ng-view=""></div>
 
@@ -86,10 +101,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/templatedecorator.js"></script>
-        <script src="scripts/controllers/services.js"></script>
-        <script src="scripts/controllers/rates.js"></script>
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/history.js"></script>
         <script src="scripts/controllers/projects.js"></script>
