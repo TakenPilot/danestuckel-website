@@ -19,6 +19,9 @@ section {
   background-color: $primarySectionBackground;
 }
 
+svg {
+  display: block;
+}
 .footer {
   clear: both;
   color: $primaryDarkText;
