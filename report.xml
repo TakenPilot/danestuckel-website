@@ -6,7 +6,13 @@
 <file name="test/spec/controllers/header.js">
   
 </file>
+<file name="test/spec/controllers/history.js">
+  
+</file>
 <file name="test/spec/controllers/main.js">
+  
+</file>
+<file name="test/spec/controllers/projects.js">
   
 </file>
 <file name="test/spec/services/templatedecorator.js">
